@@ -9,7 +9,7 @@ function cb(f) {
 }
 
 
-export default const WithLifecycle lifecycle => StatelessComponent => {
+export default const WithLifecycle = lifecycle => StatelessComponent => {
 	const classProperties = {
 		displayName: `WithLifecycle(${ComponentClass.displayName})`,
 
@@ -25,6 +25,7 @@ export default const WithLifecycle lifecycle => StatelessComponent => {
 			return StatelessComponent(this.props);
 		}
 	};
+	
 	return React.createClass(classProperties);
 }
 
